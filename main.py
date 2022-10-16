@@ -4,16 +4,13 @@ import PySimpleGUI as sg
 def converter(units, input):
     if units == 'KM to Miles':
         miles = int(input) / 1.609
-        answer_miles = round(miles, 3)
-        return f"{answer_miles} Miles"
+        return f"{round(miles, 3)} Miles"
     if units == 'Sec to Min':
         min = int(input) / 60
-        answer_min = round(min, 3)
-        return f"{answer_min} Minutes"
+        return f"{round(min, 3)} Minutes"
     if units == 'KG to Pounds':
         pounds = int(input) / 2.205
-        answer_pounds = round(pounds, 3)
-        return f"{answer_pounds} Pounds"
+        return f"{round(pounds, 3)} Pounds"
 
 
 layout = [[sg.Input(key='-INPUT-'), sg.Spin(['KM to Miles', 'Sec to Min', 'KG to Pounds'], key="-UNITS-")],
